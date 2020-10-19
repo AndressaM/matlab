@@ -54,6 +54,7 @@ while norm(error) > epsilon
        
     jacob = denso_kine.jacobian(theta);
     xm = denso_kine.fkm(theta);
+    disp(xm);
     error = vec8(xd-xm);
     jacob_pinv = (transpose(jacob)/(jacob*transpose(jacob) + (lambda^2)*eye(8)));
     theta = theta + K*jacob_pinv*error;
@@ -65,7 +66,7 @@ while norm(error) > epsilon
     axis equal;
     axis([-0.8,1.2,-0.8,0.8,-0.2,1.5]);
     view(-0.5 ,0);
-    drawnow;
+%     drawnow;
     pause(0.1)
 end
 

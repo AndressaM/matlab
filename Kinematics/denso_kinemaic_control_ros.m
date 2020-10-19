@@ -8,6 +8,7 @@ clc;
 setenv('ROS_MASTER_URI','http://172.16.66.22:11311')
 setenv('ROS_IP','172.16.66.22')
 rosinit;
+
 %%
 %Create a new DQ_kinematics object with the Denso standard Denavit-Hartenberg parameters           
 denso_kine = DQ_DENSO;
